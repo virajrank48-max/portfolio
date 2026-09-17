@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-sans-main {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Big outlined typography matching the video */
+.stroke-text-hero {
+  -webkit-text-stroke: 2px #18181b;
+  color: transparent;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .stroke-text-hero {
+    -webkit-text-stroke: 2.8px #18181b;
+  }
+}
+
+/* Subtle cloud background */
+.cloud-backdrop {
+  background-color: #d1d5d8;
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 60%),
+    radial-gradient(circle at 80% 25%, rgba(245, 247, 248, 0.9) 0%, rgba(245, 247, 248, 0.1) 50%, transparent 70%),
+    radial-gradient(circle at 40% 65%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.1) 55%, transparent 75%),
+    radial-gradient(circle at 85% 80%, rgba(230, 235, 238, 0.85) 0%, rgba(230, 235, 238, 0.1) 40%, transparent 60%),
+    radial-gradient(circle at 10% 85%, rgba(240, 243, 246, 0.8) 0%, rgba(240, 243, 246, 0.15) 50%, transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #d1d5d8;
+}
+::-webkit-scrollbar-thumb {
+  background: #a1a1aa;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
