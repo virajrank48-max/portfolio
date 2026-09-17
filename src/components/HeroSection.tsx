@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { ArrowUpRight, Linkedin, Github, Mail, MapPin, Check, Copy, TrendingUp, Binary } from 'lucide-react';
 import { motion } from 'motion/react';
+import profilePhotoAsset from '../assets/profile-photo.jpg';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
 }
 
-// Editorial high-res portrait of a young professional analyst with glasses
-const DEFAULT_PHOTO = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
+const DEFAULT_PHOTO = profilePhotoAsset;
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
   const [copiedEmail, setCopiedEmail] = useState(false);
